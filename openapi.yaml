@@ -1,0 +1,49 @@
+openapi: 3.0.3
+info:
+  title: "ZZ Canary Break' API"
+  version: 0.0.1
+  description: |
+    Injection-canary fixture for Agent Context ingestion testing (team 46199161).
+    Every payload below is an inert string; it only becomes meaningful if the
+    ingestion writer builds Cypher by string interpolation.
+    ZZBREAK_DESC_SQ'
+    ZZBREAK_DESC_DQ"
+    ZZBREAK_DESC_BT`
+    ZZBREAK_DESC_DOLLAR$zzbreakTail
+    ZZBREAK_DESC_CMT' // zzbreakCommentTail
+  contact:
+    name: "ZZBREAK_CONTACT_SQ'"
+    email: zzbreak@example.invalid
+servers:
+  - url: https://zz-canary-break.internal.example/v1
+    description: "ZZBREAK_SERVER_DESC'"
+tags:
+  - name: zzbreak
+    description: "ZZBREAK_TAG_DESC'"
+paths:
+  /zzbreak/alpha:
+    get:
+      operationId: zzbreakAlphaGet
+      summary: "ZZBREAK_SUM1_SQ'"
+      description: "ZZBREAK_DESC1_CMT' // zzbreakTail1"
+      tags: [zzbreak]
+      responses:
+        '200':
+          description: OK
+  /zzbreak/beta:
+    post:
+      operationId: zzbreakBetaPost
+      summary: "ZZBREAK_ESC_O'Reilly"
+      description: "ZZBREAK_DESC2_BT`"
+      tags: [zzbreak]
+      responses:
+        '201':
+          description: Created
+  /zzbreak/gamma:
+    delete:
+      operationId: zzbreakGammaDelete
+      summary: "ZZBREAK_SUM3_DQ\" and ZZBREAK_DOLLAR$zzbreakTail"
+      tags: [zzbreak]
+      responses:
+        '204':
+          description: Deleted
